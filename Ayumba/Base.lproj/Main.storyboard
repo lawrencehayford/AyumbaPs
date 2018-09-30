@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GurmukhiMN.ttc">
+            <string>GurmukhiMN</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Chat-->
         <scene sceneID="ifU-AJ-I2H">
@@ -36,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2tV-9P-HUy">
-                                <rect key="frame" x="0.0" y="154" width="375" height="465"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="502"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.95842610809999995" green="0.97158777569999999" blue="0.95621680740000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -51,27 +56,25 @@
                                                     <rect key="frame" x="15" y="11" width="345" height="113"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLF-J2-CTs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="129" height="113"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="198" height="113"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="129" id="bao-er-x6P"/>
-                                                                <constraint firstAttribute="height" constant="113" id="yRs-JF-VY7"/>
+                                                                <constraint firstAttribute="height" constant="113" id="Ois-pO-nZ8"/>
+                                                                <constraint firstAttribute="width" constant="198" id="nsG-on-cfs"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-6o-UYJ">
-                                                            <rect key="frame" x="206" y="46" width="107" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Service Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-6o-UYJ">
+                                                            <rect key="frame" x="223" y="41" width="147" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="cLF-J2-CTs" secondAttribute="bottom" id="0tS-01-Iis"/>
-                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" id="29A-If-1xT"/>
-                                                        <constraint firstItem="PDE-6o-UYJ" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" constant="46" id="4NG-K1-JCv"/>
-                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="leading" secondItem="tjm-bp-Yk4" secondAttribute="leading" id="E5o-B9-eBQ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="PDE-6o-UYJ" secondAttribute="trailing" constant="32" id="HeO-Ol-rvh"/>
-                                                        <constraint firstAttribute="bottom" secondItem="PDE-6o-UYJ" secondAttribute="bottom" constant="46" id="y9o-ng-v3q"/>
+                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" id="2fn-Ck-NTt"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cLF-J2-CTs" secondAttribute="bottom" id="8SZ-dY-OY0"/>
+                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="leading" secondItem="tjm-bp-Yk4" secondAttribute="leading" id="kjB-Am-hcv"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -95,45 +98,47 @@
                                     <outlet property="delegate" destination="OOB-pq-yyJ" id="s11-Xj-abV"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="1CC-ih-mJJ">
+                                <rect key="frame" x="0.0" y="13" width="375" height="56"/>
+                                <color key="tintColor" red="1" green="0.99790274189999995" blue="0.98611483339999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.33506208658218384" green="0.55138784646987915" blue="0.84001857042312622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OOB-pq-yyJ" id="Sgs-1H-IT6"/>
+                                </connections>
+                            </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gnu-wt-v0a">
-                                <rect key="frame" x="16" y="109" width="343" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="ABf-V7-Gq3"/>
-                                    <constraint firstAttribute="height" constant="28" id="D7y-xr-f4h"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="78" width="343" height="29"/>
                                 <segments>
                                     <segment title="Artisan Services"/>
                                     <segment title="Moving into a new home?"/>
                                 </segments>
+                                <connections>
+                                    <action selector="OnSegmentSelected:" destination="OOB-pq-yyJ" eventType="valueChanged" id="k8H-je-C22"/>
+                                </connections>
                             </segmentedControl>
-                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CC-ih-mJJ">
-                                <rect key="frame" x="0.0" y="40" width="375" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="Omi-5E-Afm"/>
-                                    <constraint firstAttribute="height" constant="56" id="nCK-JQ-enn"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="0.99790274189999995" blue="0.98611483339999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.67195159313725483" green="0.0" blue="0.048794604940626721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.67195159309999997" green="0.0" blue="0.04879460494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33890906298579088" green="0.55151145138567059" blue="0.83925217390060425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.99790274189999995" blue="0.98611483339999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2tV-9P-HUy" firstAttribute="leading" secondItem="7iQ-uP-Qjs" secondAttribute="leading" id="7O7-mh-bks"/>
-                            <constraint firstItem="1CC-ih-mJJ" firstAttribute="top" secondItem="7iQ-uP-Qjs" secondAttribute="top" constant="20" id="8nF-t5-MHj"/>
-                            <constraint firstItem="Gnu-wt-v0a" firstAttribute="leading" secondItem="7iQ-uP-Qjs" secondAttribute="leading" constant="16" id="Gim-Pc-y7M"/>
-                            <constraint firstItem="2tV-9P-HUy" firstAttribute="top" secondItem="Gnu-wt-v0a" secondAttribute="bottom" constant="17" id="Haw-eK-zLj"/>
-                            <constraint firstItem="2tV-9P-HUy" firstAttribute="trailing" secondItem="7iQ-uP-Qjs" secondAttribute="trailing" id="L4d-cg-bCE"/>
-                            <constraint firstItem="Gnu-wt-v0a" firstAttribute="top" secondItem="1CC-ih-mJJ" secondAttribute="bottom" constant="13" id="WWm-sA-0FI"/>
-                            <constraint firstItem="1CC-ih-mJJ" firstAttribute="trailing" secondItem="7iQ-uP-Qjs" secondAttribute="trailing" id="Xxh-5X-95D"/>
-                            <constraint firstItem="7iQ-uP-Qjs" firstAttribute="trailing" secondItem="Gnu-wt-v0a" secondAttribute="trailing" constant="16" id="alo-Rz-oWL"/>
-                            <constraint firstAttribute="bottom" secondItem="2tV-9P-HUy" secondAttribute="bottom" constant="48" id="dq2-lv-Na5"/>
-                            <constraint firstItem="1CC-ih-mJJ" firstAttribute="leading" secondItem="7iQ-uP-Qjs" secondAttribute="leading" id="y3S-5I-VDB"/>
+                            <constraint firstItem="1CC-ih-mJJ" firstAttribute="trailing" secondItem="7iQ-uP-Qjs" secondAttribute="trailing" id="4tq-xX-aYo"/>
+                            <constraint firstItem="2tV-9P-HUy" firstAttribute="top" secondItem="Gnu-wt-v0a" secondAttribute="bottom" constant="11" id="CLg-xu-fCC"/>
+                            <constraint firstItem="7iQ-uP-Qjs" firstAttribute="trailing" secondItem="Gnu-wt-v0a" secondAttribute="trailing" constant="16" id="Gzl-gW-K93"/>
+                            <constraint firstItem="Gnu-wt-v0a" firstAttribute="top" secondItem="1CC-ih-mJJ" secondAttribute="bottom" constant="9" id="UHD-W8-wXg"/>
+                            <constraint firstItem="1CC-ih-mJJ" firstAttribute="leading" secondItem="7iQ-uP-Qjs" secondAttribute="leading" id="W8D-rQ-TZb"/>
+                            <constraint firstAttribute="bottom" secondItem="2tV-9P-HUy" secondAttribute="bottom" constant="48" id="Ydm-Ht-fe0"/>
+                            <constraint firstItem="Gnu-wt-v0a" firstAttribute="leading" secondItem="7iQ-uP-Qjs" secondAttribute="leading" constant="16" id="YjV-EE-RKW"/>
+                            <constraint firstItem="2tV-9P-HUy" firstAttribute="leading" secondItem="7iQ-uP-Qjs" secondAttribute="leading" id="alb-5L-agG"/>
+                            <constraint firstItem="2tV-9P-HUy" firstAttribute="trailing" secondItem="7iQ-uP-Qjs" secondAttribute="trailing" id="vYL-Ki-lwo"/>
+                            <constraint firstItem="1CC-ih-mJJ" firstAttribute="top" secondItem="yxg-U8-dD6" secondAttribute="top" constant="13" id="yfl-jf-SFM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7iQ-uP-Qjs"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="compass" id="fBP-Do-u4S"/>
+                    <connections>
+                        <outlet property="SearchBar" destination="1CC-ih-mJJ" id="kE5-vu-snv"/>
+                        <outlet property="table" destination="2tV-9P-HUy" id="Org-E3-DV8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhV-Xa-F9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
