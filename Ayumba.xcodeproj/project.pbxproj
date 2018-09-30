@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAF921600E2700DD68E0 /* ServicesTableView.swift */; };
+		8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAFD2161390F00DD68E0 /* CardView.swift */; };
+		844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A4F215BE22200E226A5 /* ExploreViewController.swift */; };
+		844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A51215BE24000E226A5 /* SettingsViewController.swift */; };
+		844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A53215BE25500E226A5 /* ProfileViewController.swift */; };
+		844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A55215BE26300E226A5 /* ChatViewController.swift */; };
 		846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB60D215627C20002AD2D /* AppDelegate.swift */; };
 		846EB610215627C20002AD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB60F215627C20002AD2D /* ViewController.swift */; };
 		846EB613215627C20002AD2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846EB611215627C20002AD2D /* Main.storyboard */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8424EAF921600E2700DD68E0 /* ServicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
+		8424EAFD2161390F00DD68E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		844D6A4F215BE22200E226A5 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		844D6A51215BE24000E226A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		844D6A53215BE25500E226A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		844D6A55215BE26300E226A5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		846EB60A215627C20002AD2D /* Ayumba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ayumba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846EB60D215627C20002AD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846EB60F215627C20002AD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +86,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8424EAF62160095C00DD68E0 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				8424EAF921600E2700DD68E0 /* ServicesTableView.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		8424EAFC216138F100DD68E0 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8424EAFD2161390F00DD68E0 /* CardView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		844D6A4E215BE1DC00E226A5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				844D6A4F215BE22200E226A5 /* ExploreViewController.swift */,
+				844D6A51215BE24000E226A5 /* SettingsViewController.swift */,
+				844D6A53215BE25500E226A5 /* ProfileViewController.swift */,
+				844D6A55215BE26300E226A5 /* ChatViewController.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		846EB601215627C20002AD2D = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +136,9 @@
 		846EB60C215627C20002AD2D /* Ayumba */ = {
 			isa = PBXGroup;
 			children = (
+				8424EAFC216138F100DD68E0 /* CustomViews */,
+				8424EAF62160095C00DD68E0 /* TableViews */,
+				844D6A4E215BE1DC00E226A5 /* views */,
 				846EB60D215627C20002AD2D /* AppDelegate.swift */,
 				846EB60F215627C20002AD2D /* ViewController.swift */,
 				846EB611215627C20002AD2D /* Main.storyboard */,
@@ -261,6 +303,12 @@
 			files = (
 				846EB610215627C20002AD2D /* ViewController.swift in Sources */,
 				846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */,
+				844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */,
+				844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */,
+				844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */,
+				844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */,
+				8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */,
+				8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
