@@ -7,14 +7,15 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var SearchBar: UISearchBar!
     let services =  Setup()
-    var filteredData: [String]!
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filteredData = searchText.isEmpty ? services.GetArtisan() : services.GetArtisan().filter { (item: String) -> Bool in
+        services.SetFilteredArr(
+            Arr: searchText.isEmpty ? services.GetArtisan() : services.GetArtisan().filter { (item: String) -> Bool in
             // If dataItem matches the searchText, return true to include it
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
+            )
         
         table.reloadData()
         
@@ -24,15 +25,15 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return filteredData.count
+        return services.GetFilteredArr().count
        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ServicesTableView
         
-            cell.ServiceImage.image = UIImage(named: (self.filteredData[indexPath.row] + services.imageExtension))
-            cell.ServiceName.text = self.filteredData[indexPath.row].uppercased()
+            cell.ServiceImage.image = UIImage(named: (services.GetFilteredArr()[indexPath.row] + services.imageExtension))
+            cell.ServiceName.text = services.GetFilteredArr()[indexPath.row].uppercased()
         
        return cell
     }
@@ -41,7 +42,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         filteredData = services.GetArtisan()
+         services.SetFilteredArr(Arr: services.GetArtisan())
         // Do any additional setup after loading the view.
     }
 
@@ -55,12 +56,12 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
         switch sender.selectedSegmentIndex {
         case 0:
             print ("0 selected")
-            filteredData = services.GetArtisan()
+            services.SetFilteredArr(Arr: services.GetArtisan())
             table.reloadData()
             break
         case 1:
             print ("1 selected")
-            filteredData = services.GetMovingHome()
+            services.SetFilteredArr(Arr: services.GetMovingHome())
             table.reloadData()
             break
         default:

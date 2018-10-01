@@ -4,7 +4,8 @@ class Setup{
     
     var ArtisanservicesArr = [String]()
     var MovingHomeArr = [String]()
-    var imageExtension : String = "jpg"
+    var filteredArr : [String]!
+    var imageExtension : String = ".jpg"
     
     init() {
         self.ArtisanservicesArr = ["capentery","cleaning","plumbing","massage","makeup","painting","trainer"]
@@ -23,6 +24,15 @@ class Setup{
     
     func GetImageExtension() -> String {
         return self.imageExtension
+    }
+    
+    func SetFilteredArr(Arr : [String] ) {
+        self.filteredArr = Arr
+    }
+    
+    func GetFilteredArr() -> [String]{
+        return self.filteredArr
+    
     }
     
     
