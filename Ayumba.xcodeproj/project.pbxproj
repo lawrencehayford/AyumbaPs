@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAF921600E2700DD68E0 /* ServicesTableView.swift */; };
 		8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAFD2161390F00DD68E0 /* CardView.swift */; };
+		84391F07216266AF00A66E40 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391F06216266AF00A66E40 /* Setup.swift */; };
 		844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A4F215BE22200E226A5 /* ExploreViewController.swift */; };
 		844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A51215BE24000E226A5 /* SettingsViewController.swift */; };
 		844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A53215BE25500E226A5 /* ProfileViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		8424EAF921600E2700DD68E0 /* ServicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
 		8424EAFD2161390F00DD68E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		84391F06216266AF00A66E40 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		844D6A4F215BE22200E226A5 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		844D6A51215BE24000E226A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		844D6A53215BE25500E226A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		84391F052162668600A66E40 /* usedClassed */ = {
+			isa = PBXGroup;
+			children = (
+				84391F06216266AF00A66E40 /* Setup.swift */,
+			);
+			path = usedClassed;
+			sourceTree = "<group>";
+		};
 		844D6A4E215BE1DC00E226A5 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		846EB60C215627C20002AD2D /* Ayumba */ = {
 			isa = PBXGroup;
 			children = (
+				84391F052162668600A66E40 /* usedClassed */,
 				8424EAFC216138F100DD68E0 /* CustomViews */,
 				8424EAF62160095C00DD68E0 /* TableViews */,
 				844D6A4E215BE1DC00E226A5 /* views */,
@@ -308,6 +319,7 @@
 				844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */,
 				844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */,
 				8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */,
+				84391F07216266AF00A66E40 /* Setup.swift in Sources */,
 				8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ayumba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayumba.professionalservices.Ayumba;
@@ -489,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ayumba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayumba.professionalservices.Ayumba;

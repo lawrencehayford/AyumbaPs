@@ -6,11 +6,12 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var SearchBar: UISearchBar!
-    var services = ["capentery","cleaning","plumbing","massage","makeup","painting","trainer"]
+    let services =  Setup()
     var filteredData: [String]!
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredData = searchText.isEmpty ? services : services.filter { (item: String) -> Bool in
+        
+        filteredData = searchText.isEmpty ? services.GetArtisan() : services.GetArtisan().filter { (item: String) -> Bool in
             // If dataItem matches the searchText, return true to include it
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
@@ -30,7 +31,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ServicesTableView
         
-            cell.ServiceImage.image = UIImage(named: (self.filteredData[indexPath.row] + ".jpg"))
+            cell.ServiceImage.image = UIImage(named: (self.filteredData[indexPath.row] + services.imageExtension))
             cell.ServiceName.text = self.filteredData[indexPath.row].uppercased()
         
        return cell
@@ -40,7 +41,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         filteredData = services
+         filteredData = services.GetArtisan()
         // Do any additional setup after loading the view.
     }
 
@@ -54,14 +55,12 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
         switch sender.selectedSegmentIndex {
         case 0:
             print ("0 selected")
-            services = ["capentery","cleaning","plumbing","massage","makeup","painting","trainer"]
-            filteredData = services
+            filteredData = services.GetArtisan()
             table.reloadData()
             break
         case 1:
             print ("1 selected")
-            services = ["capentery","cleaning"]
-            filteredData = services
+            filteredData = services.GetMovingHome()
             table.reloadData()
             break
         default:
