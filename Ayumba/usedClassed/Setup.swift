@@ -6,6 +6,7 @@ class Setup{
     var MovingHomeArr = [String]()
     var filteredArr : [String]!
     var imageExtension : String = ".jpg"
+    var selectedService : String!
     
     init() {
         self.ArtisanservicesArr = ["capentery","cleaning","plumbing","massage","makeup","painting","trainer"]
@@ -35,6 +36,13 @@ class Setup{
     
     }
     
+    func SetSelectedRow(Row : String){
+        
+        self.selectedService = Row
+    }
+    func GetSelectedRow() -> String {
+        return self.selectedService
+    }
     
     
     

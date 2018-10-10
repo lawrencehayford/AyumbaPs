@@ -70,4 +70,9 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        services.SetSelectedRow(Row: services.GetFilteredArr()[indexPath.row])
+        performSegue(withIdentifier: "MainServiceSeque", sender: self)
+    }
+    
 }
