@@ -32,7 +32,10 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ServicesTableView
         
-            cell.ServiceImage.image = UIImage(named: (services.GetFilteredArr()[indexPath.row] + services.imageExtension))
+            if let url = URL(string: services.imagePath + services.GetFilteredArr()[indexPath.row] + services.imageExtension) {
+                downloadImage(from: url, cell: cell, service: services)
+            }
+            //cell.ServiceImage.image = UIImage(named: (services.imagePath + services.GetFilteredArr()[indexPath.row] + services.imageExtension))
             cell.ServiceName.text = services.GetFilteredArr()[indexPath.row].uppercased()
         
        return cell
@@ -73,6 +76,21 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         services.SetSelectedRow(Row: services.GetFilteredArr()[indexPath.row])
         performSegue(withIdentifier: "MainServiceSeque", sender: self)
+    }
+    
+    func downloadImage(from url: URL, cell : ServicesTableView, service : Setup ) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() {
+                cell.ServiceImage.image = UIImage(data: data)
+            }
+        }
+    }
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
 }

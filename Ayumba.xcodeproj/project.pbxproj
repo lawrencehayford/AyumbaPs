@@ -25,6 +25,7 @@
 		846EB618215627C20002AD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846EB616215627C20002AD2D /* LaunchScreen.storyboard */; };
 		846EB623215627C30002AD2D /* AyumbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB622215627C30002AD2D /* AyumbaTests.swift */; };
 		846EB62E215627C30002AD2D /* AyumbaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB62D215627C30002AD2D /* AyumbaUITests.swift */; };
+		8488B8AD2170FBFA0035EA48 /* MainServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B8AC2170FBFA0035EA48 /* MainServiceTableViewController.swift */; };
 		93F8595FC7DEFEB1E23144A7 /* Pods_Ayumba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E85204043E12C0FC5AF461 /* Pods_Ayumba.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		846EB629215627C30002AD2D /* AyumbaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AyumbaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846EB62D215627C30002AD2D /* AyumbaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyumbaUITests.swift; sourceTree = "<group>"; };
 		846EB62F215627C30002AD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8488B8AC2170FBFA0035EA48 /* MainServiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServiceTableViewController.swift; sourceTree = "<group>"; };
 		AFAD4D37FE0CABB6D97B0EEE /* Pods_AyumbaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AyumbaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4622EED8E429F07FD83E1A0 /* Pods-AyumbaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaUITests/Pods-AyumbaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7DD28D5B3A3EC7E90D7AB38 /* Pods-AyumbaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaTests/Pods-AyumbaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8424EAF921600E2700DD68E0 /* ServicesTableView.swift */,
+				8488B8AC2170FBFA0035EA48 /* MainServiceTableViewController.swift */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488B8AD2170FBFA0035EA48 /* MainServiceTableViewController.swift in Sources */,
 				846EB610215627C20002AD2D /* ViewController.swift in Sources */,
 				846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */,
 				844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */,
@@ -615,10 +619,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GAAB9AMPA9;
 				INFOPLIST_FILE = Ayumba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayumba.professionalservices.Ayumba;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonas.phoneapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -631,10 +635,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GAAB9AMPA9;
 				INFOPLIST_FILE = Ayumba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayumba.professionalservices.Ayumba;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonas.phoneapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
