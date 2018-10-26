@@ -12,12 +12,12 @@
 		8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAF921600E2700DD68E0 /* ServicesTableView.swift */; };
 		8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAFD2161390F00DD68E0 /* CardView.swift */; };
 		84391F07216266AF00A66E40 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391F06216266AF00A66E40 /* Setup.swift */; };
-		84391F092162841D00A66E40 /* MainServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391F082162841D00A66E40 /* MainServicesViewController.swift */; };
 		844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A4F215BE22200E226A5 /* ExploreViewController.swift */; };
 		844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A51215BE24000E226A5 /* SettingsViewController.swift */; };
 		844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A53215BE25500E226A5 /* ProfileViewController.swift */; };
 		844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D6A55215BE26300E226A5 /* ChatViewController.swift */; };
 		8452D95B216E4022001D9C3D /* SendHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452D95A216E4022001D9C3D /* SendHttpRequest.swift */; };
+		84656C862183097300ED1248 /* MainServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84656C852183097300ED1248 /* MainServicesViewController.swift */; };
 		846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB60D215627C20002AD2D /* AppDelegate.swift */; };
 		846EB610215627C20002AD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB60F215627C20002AD2D /* ViewController.swift */; };
 		846EB613215627C20002AD2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846EB611215627C20002AD2D /* Main.storyboard */; };
@@ -25,7 +25,6 @@
 		846EB618215627C20002AD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846EB616215627C20002AD2D /* LaunchScreen.storyboard */; };
 		846EB623215627C30002AD2D /* AyumbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB622215627C30002AD2D /* AyumbaTests.swift */; };
 		846EB62E215627C30002AD2D /* AyumbaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB62D215627C30002AD2D /* AyumbaUITests.swift */; };
-		8488B8AD2170FBFA0035EA48 /* MainServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B8AC2170FBFA0035EA48 /* MainServiceTableViewController.swift */; };
 		93F8595FC7DEFEB1E23144A7 /* Pods_Ayumba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E85204043E12C0FC5AF461 /* Pods_Ayumba.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,12 +52,12 @@
 		8424EAF921600E2700DD68E0 /* ServicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
 		8424EAFD2161390F00DD68E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		84391F06216266AF00A66E40 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
-		84391F082162841D00A66E40 /* MainServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServicesViewController.swift; sourceTree = "<group>"; };
 		844D6A4F215BE22200E226A5 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		844D6A51215BE24000E226A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		844D6A53215BE25500E226A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		844D6A55215BE26300E226A5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8452D95A216E4022001D9C3D /* SendHttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHttpRequest.swift; sourceTree = "<group>"; };
+		84656C852183097300ED1248 /* MainServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServicesViewController.swift; sourceTree = "<group>"; };
 		846EB60A215627C20002AD2D /* Ayumba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ayumba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846EB60D215627C20002AD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846EB60F215627C20002AD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 		846EB629215627C30002AD2D /* AyumbaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AyumbaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846EB62D215627C30002AD2D /* AyumbaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyumbaUITests.swift; sourceTree = "<group>"; };
 		846EB62F215627C30002AD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8488B8AC2170FBFA0035EA48 /* MainServiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServiceTableViewController.swift; sourceTree = "<group>"; };
 		AFAD4D37FE0CABB6D97B0EEE /* Pods_AyumbaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AyumbaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4622EED8E429F07FD83E1A0 /* Pods-AyumbaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaUITests/Pods-AyumbaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7DD28D5B3A3EC7E90D7AB38 /* Pods-AyumbaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaTests/Pods-AyumbaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				8424EAF921600E2700DD68E0 /* ServicesTableView.swift */,
-				8488B8AC2170FBFA0035EA48 /* MainServiceTableViewController.swift */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -155,7 +152,7 @@
 				844D6A51215BE24000E226A5 /* SettingsViewController.swift */,
 				844D6A53215BE25500E226A5 /* ProfileViewController.swift */,
 				844D6A55215BE26300E226A5 /* ChatViewController.swift */,
-				84391F082162841D00A66E40 /* MainServicesViewController.swift */,
+				84656C852183097300ED1248 /* MainServicesViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -440,17 +437,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8488B8AD2170FBFA0035EA48 /* MainServiceTableViewController.swift in Sources */,
 				846EB610215627C20002AD2D /* ViewController.swift in Sources */,
 				846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */,
 				844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */,
+				84656C862183097300ED1248 /* MainServicesViewController.swift in Sources */,
 				844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */,
 				844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */,
 				844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */,
 				8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */,
 				84391F07216266AF00A66E40 /* Setup.swift in Sources */,
 				8452D95B216E4022001D9C3D /* SendHttpRequest.swift in Sources */,
-				84391F092162841D00A66E40 /* MainServicesViewController.swift in Sources */,
 				8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GAAB9AMPA9;
 				INFOPLIST_FILE = Ayumba/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonas.phoneapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -637,6 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GAAB9AMPA9;
 				INFOPLIST_FILE = Ayumba/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonas.phoneapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
