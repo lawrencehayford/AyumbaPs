@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		328A6391589C4FB2693B47E4 /* Pods_AyumbaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAD4D37FE0CABB6D97B0EEE /* Pods_AyumbaUITests.framework */; };
 		4CED5762F9B4951EDF36AEEE /* Pods_AyumbaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A69D681FFDC18BD330DE4FC /* Pods_AyumbaTests.framework */; };
+		840E07512184FF66007ECE8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07502184FF66007ECE8B /* LoginViewController.swift */; };
+		840E075321850763007ECE8B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E075221850763007ECE8B /* ForgotPasswordViewController.swift */; };
 		8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAF921600E2700DD68E0 /* ServicesTableView.swift */; };
 		8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAFD2161390F00DD68E0 /* CardView.swift */; };
 		84391F07216266AF00A66E40 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391F06216266AF00A66E40 /* Setup.swift */; };
@@ -26,7 +28,7 @@
 		846EB618215627C20002AD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846EB616215627C20002AD2D /* LaunchScreen.storyboard */; };
 		846EB623215627C30002AD2D /* AyumbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB622215627C30002AD2D /* AyumbaTests.swift */; };
 		846EB62E215627C30002AD2D /* AyumbaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB62D215627C30002AD2D /* AyumbaUITests.swift */; };
-		84C9DA3A2184ACF80014197C /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9DA392184ACF80014197C /* SigninViewController.swift */; };
+		84C9DA3A2184ACF80014197C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9DA392184ACF80014197C /* SignUpViewController.swift */; };
 		93F8595FC7DEFEB1E23144A7 /* Pods_Ayumba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E85204043E12C0FC5AF461 /* Pods_Ayumba.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		2E2DA34430A3346308391CDA /* Pods-AyumbaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaUITests/Pods-AyumbaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		447A3306D531FBA09C315355 /* Pods-Ayumba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ayumba.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ayumba/Pods-Ayumba.debug.xcconfig"; sourceTree = "<group>"; };
 		4A69D681FFDC18BD330DE4FC /* Pods_AyumbaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AyumbaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840E07502184FF66007ECE8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		840E075221850763007ECE8B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8424EAF921600E2700DD68E0 /* ServicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
 		8424EAFD2161390F00DD68E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		84391F06216266AF00A66E40 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		846EB629215627C30002AD2D /* AyumbaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AyumbaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846EB62D215627C30002AD2D /* AyumbaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyumbaUITests.swift; sourceTree = "<group>"; };
 		846EB62F215627C30002AD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84C9DA392184ACF80014197C /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		84C9DA392184ACF80014197C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AFAD4D37FE0CABB6D97B0EEE /* Pods_AyumbaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AyumbaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4622EED8E429F07FD83E1A0 /* Pods-AyumbaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaUITests/Pods-AyumbaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7DD28D5B3A3EC7E90D7AB38 /* Pods-AyumbaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaTests/Pods-AyumbaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +162,9 @@
 				844D6A53215BE25500E226A5 /* ProfileViewController.swift */,
 				844D6A55215BE26300E226A5 /* ChatViewController.swift */,
 				84656C852183097300ED1248 /* MainServicesViewController.swift */,
-				84C9DA392184ACF80014197C /* SigninViewController.swift */,
+				84C9DA392184ACF80014197C /* SignUpViewController.swift */,
+				840E07502184FF66007ECE8B /* LoginViewController.swift */,
+				840E075221850763007ECE8B /* ForgotPasswordViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -443,16 +449,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840E07512184FF66007ECE8B /* LoginViewController.swift in Sources */,
 				846EB610215627C20002AD2D /* ViewController.swift in Sources */,
 				846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */,
 				84656C8A2183CC5200ED1248 /* MainServicesTableViewCell.swift in Sources */,
-				84C9DA3A2184ACF80014197C /* SigninViewController.swift in Sources */,
+				84C9DA3A2184ACF80014197C /* SignUpViewController.swift in Sources */,
 				844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */,
 				84656C862183097300ED1248 /* MainServicesViewController.swift in Sources */,
 				844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */,
 				844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */,
 				844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */,
 				8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */,
+				840E075321850763007ECE8B /* ForgotPasswordViewController.swift in Sources */,
 				84391F07216266AF00A66E40 /* Setup.swift in Sources */,
 				8452D95B216E4022001D9C3D /* SendHttpRequest.swift in Sources */,
 				8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */,

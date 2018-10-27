@@ -8,18 +8,30 @@
 
 import UIKit
 
-class SigninViewController: UIViewController {
+class SignUpViewController: UIViewController {
     var dict : [String : AnyObject]!
     var userName : String!
     var userProfession: String!
     var userLogo : String!
     var userContact : String!
     
-
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var fullname: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var contact: UITextField!
+    @IBOutlet weak var dob: UIDatePicker!
+    
+    
+    
     override func viewDidLoad() {
       super.viewDidLoad()
     }
-   
+    
+    @IBAction func addPhoto(_ sender: UIButton) {
+    }
+    
+    @IBAction func signUp(_ sender: UIButton) {
+    }
     //function is fetching the user data
    
     

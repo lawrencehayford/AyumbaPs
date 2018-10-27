@@ -111,6 +111,7 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         PersonImage =  self.personInfo[indexPath.row].image
         PersonContact =  self.personInfo[indexPath.row].contact
         PersonProfession =  self.personInfo[indexPath.row].profession
