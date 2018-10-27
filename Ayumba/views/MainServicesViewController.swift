@@ -45,9 +45,9 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("latitude : \(String(describing: latitude))")
-        print("longitude : \(String(describing: longitude))")
-        print("type : \(String(describing: type))")
+        print("latitude : \(String(describing: latitude!))")
+        print("longitude : \(String(describing: longitude!))")
+        print("type : \(String(describing: type!))")
         loader.startAnimating()
         // Do any additional setup after loading the view.
         
@@ -73,7 +73,7 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
     func Load() {
         
         let parameters = [
-            "type": "1" ,//String(describing: type),
+            "type": String(describing: type!),
             "latitude": "-0.2335539", //String(describing: latitude),
             "longitude": "5.5493243" //String(describing: longitude)
             

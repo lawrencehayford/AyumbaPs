@@ -17,6 +17,16 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     var latitude : String?
     var longitude : String?
     
+    struct serviceStruct {
+        let id : String
+        let name : String
+        let type : String
+        let logo : String
+        let description : String
+        let show : String
+    }
+    var serviceArr = [serviceStruct]()
+    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -44,11 +54,18 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ServicesTableView
         
         
-            if let url = URL(string: services.imagePath + services.GetFilteredArr()[indexPath.row] + services.imageExtension) {
-                downloadImage(from: url, cell: cell, service: services)
-            }
+        
             //cell.ServiceImage.image = UIImage(named: (services.imagePath + services.GetFilteredArr()[indexPath.row] + services.imageExtension))
-            cell.ServiceName.text = services.GetFilteredArr()[indexPath.row].uppercased()
+            cell.ServiceName.text = services.GetFilteredArr()[indexPath.row]
+        let index = serviceArr.index(where: { $0.name == services.GetFilteredArr()[indexPath.row] })
+        let logoPath = "http://"+self.serviceArr[index!].logo
+        print("index gotten is \(String(describing: index))")
+         print("logo gotten is \(logoPath)")
+        if let url = URL(string: logoPath) {
+            downloadImage(from: url, cell: cell, service: services)
+        }
+        
+          cell.serviceDescription.text = self.serviceArr[index!].description
         
        return cell
     }
@@ -110,6 +127,21 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
                 if(data["show"] as Any as! String == "N"){
                     continue
                 }
+                
+                self.serviceArr.append(serviceStruct(
+                    id: String(describing: data["service-id"]! ),
+                    name: String(describing: data["service-name"]! ),
+                    type: String(describing: data["type"]!)
+                    ,
+                    logo: String(describing: data["logo-url"]!),
+                    description: String(describing: data["description"]! ),
+                    show: String(describing: data["show"]!
+                                        )
+                    
+                ))
+                
+                
+                
                 //checking if type is normal service or moving to home
                 if(data["type"] as Any as! String == "1"){
                 
@@ -236,7 +268,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     
    
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedType = services.GetFilteredArr()[indexPath.row]
+        selectedType = self.serviceArr[indexPath.row].id
         performSegue(withIdentifier: "MainSeque", sender: self)
         }
     

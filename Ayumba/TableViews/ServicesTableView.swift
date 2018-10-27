@@ -6,6 +6,8 @@ class ServicesTableView: UITableViewCell {
     @IBOutlet weak var ServiceImage: UIImageView!
     
     @IBOutlet weak var ServiceName: UILabel!
+    
+    @IBOutlet weak var serviceDescription: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

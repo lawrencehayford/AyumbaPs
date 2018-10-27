@@ -55,38 +55,45 @@
                                                     <rect key="frame" x="15" y="11" width="345" height="113"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLF-J2-CTs">
-                                                            <rect key="frame" x="0.0" y="0.0" width="198" height="113"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="178" height="113"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="198" id="dn6-AH-YSm"/>
-                                                                <constraint firstAttribute="height" constant="113" id="hPz-wn-S9m"/>
+                                                                <constraint firstAttribute="height" constant="113" id="0XQ-08-fb0"/>
+                                                                <constraint firstAttribute="width" constant="178" id="gf6-Hu-APc"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-6o-UYJ">
-                                                            <rect key="frame" x="223" y="41" width="99" height="18"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="99" id="MDM-N0-0xh"/>
-                                                                <constraint firstAttribute="height" constant="18" id="gv7-ol-Tpm"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-6o-UYJ">
+                                                            <rect key="frame" x="192" y="26" width="139" height="15"/>
+                                                            <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of service" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTz-P1-Bse">
+                                                            <rect key="frame" x="192" y="39" width="139" height="35"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                            <color key="textColor" red="0.22586045861941181" green="0.22557945439331578" blue="0.23048789828431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" id="15C-4n-h8e"/>
+                                                        <constraint firstItem="PDE-6o-UYJ" firstAttribute="leading" secondItem="cLF-J2-CTs" secondAttribute="trailing" constant="14" id="4CQ-ti-ygg"/>
+                                                        <constraint firstItem="PDE-6o-UYJ" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" constant="26" id="4NX-Hq-JTB"/>
+                                                        <constraint firstItem="NTz-P1-Bse" firstAttribute="leading" secondItem="cLF-J2-CTs" secondAttribute="trailing" constant="14" id="7yn-YW-nb7"/>
+                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" id="9SO-i3-zvz"/>
                                                         <constraint firstAttribute="height" constant="113" id="Aum-RW-Ut0"/>
-                                                        <constraint firstItem="PDE-6o-UYJ" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" constant="41" id="GQX-zS-PCg"/>
-                                                        <constraint firstAttribute="trailing" secondItem="PDE-6o-UYJ" secondAttribute="trailing" constant="23" id="Qgn-4u-G27"/>
-                                                        <constraint firstAttribute="bottom" secondItem="PDE-6o-UYJ" secondAttribute="bottom" constant="54" id="YgJ-zf-cgY"/>
-                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="leading" secondItem="tjm-bp-Yk4" secondAttribute="leading" id="jOt-Zz-l7I"/>
-                                                        <constraint firstAttribute="bottom" secondItem="cLF-J2-CTs" secondAttribute="bottom" id="qYQ-rC-QEC"/>
+                                                        <constraint firstItem="NTz-P1-Bse" firstAttribute="top" secondItem="tjm-bp-Yk4" secondAttribute="top" constant="39" id="E7B-X7-LiF"/>
+                                                        <constraint firstItem="cLF-J2-CTs" firstAttribute="leading" secondItem="tjm-bp-Yk4" secondAttribute="leading" id="JrV-2o-8rw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cLF-J2-CTs" secondAttribute="bottom" id="Nic-g6-AXP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PDE-6o-UYJ" secondAttribute="bottom" constant="72" id="b7v-GR-tmb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PDE-6o-UYJ" secondAttribute="trailing" constant="14" id="chs-Xk-Y4P"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NTz-P1-Bse" secondAttribute="bottom" constant="39" id="hpF-IE-F8c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NTz-P1-Bse" secondAttribute="trailing" constant="14" id="tO2-l6-eFD"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -102,6 +109,7 @@
                                         <connections>
                                             <outlet property="ServiceImage" destination="cLF-J2-CTs" id="GVN-mg-9dX"/>
                                             <outlet property="ServiceName" destination="PDE-6o-UYJ" id="Okd-JG-FuZ"/>
+                                            <outlet property="serviceDescription" destination="NTz-P1-Bse" id="Y5I-ao-cU0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
