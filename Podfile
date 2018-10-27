@@ -7,6 +7,7 @@ target 'Ayumba' do
 
   # Pods for Ayumba
    pod 'Alamofire', '~> 4.7'
+  
 
   target 'AyumbaTests' do
     inherit! :search_paths

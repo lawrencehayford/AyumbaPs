@@ -26,6 +26,7 @@
 		846EB618215627C20002AD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846EB616215627C20002AD2D /* LaunchScreen.storyboard */; };
 		846EB623215627C30002AD2D /* AyumbaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB622215627C30002AD2D /* AyumbaTests.swift */; };
 		846EB62E215627C30002AD2D /* AyumbaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB62D215627C30002AD2D /* AyumbaUITests.swift */; };
+		84C9DA3A2184ACF80014197C /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9DA392184ACF80014197C /* SigninViewController.swift */; };
 		93F8595FC7DEFEB1E23144A7 /* Pods_Ayumba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E85204043E12C0FC5AF461 /* Pods_Ayumba.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		846EB629215627C30002AD2D /* AyumbaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AyumbaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846EB62D215627C30002AD2D /* AyumbaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyumbaUITests.swift; sourceTree = "<group>"; };
 		846EB62F215627C30002AD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C9DA392184ACF80014197C /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		AFAD4D37FE0CABB6D97B0EEE /* Pods_AyumbaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AyumbaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4622EED8E429F07FD83E1A0 /* Pods-AyumbaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaUITests/Pods-AyumbaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B7DD28D5B3A3EC7E90D7AB38 /* Pods-AyumbaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaTests/Pods-AyumbaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				844D6A53215BE25500E226A5 /* ProfileViewController.swift */,
 				844D6A55215BE26300E226A5 /* ChatViewController.swift */,
 				84656C852183097300ED1248 /* MainServicesViewController.swift */,
+				84C9DA392184ACF80014197C /* SigninViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				846EB610215627C20002AD2D /* ViewController.swift in Sources */,
 				846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */,
 				84656C8A2183CC5200ED1248 /* MainServicesTableViewCell.swift in Sources */,
+				84C9DA3A2184ACF80014197C /* SigninViewController.swift in Sources */,
 				844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */,
 				84656C862183097300ED1248 /* MainServicesViewController.swift in Sources */,
 				844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */,

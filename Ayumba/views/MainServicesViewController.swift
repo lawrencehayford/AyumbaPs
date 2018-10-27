@@ -20,6 +20,10 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
         let contact : String
     }
     var personInfo = [Person]()
+    var PersonImage : String!
+    var PersonProfession : String!
+    var PersonContact : String!
+    var PersonName : String!
     
     @IBOutlet weak var table: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,7 +110,25 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        PersonImage =  self.personInfo[indexPath.row].image
+        PersonContact =  self.personInfo[indexPath.row].contact
+        PersonProfession =  self.personInfo[indexPath.row].profession
+        PersonName =  self.personInfo[indexPath.row].name
+        performSegue(withIdentifier: "SigninSeque", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        /*
+        if(segue.identifier == "SigninSeque") {
+            let vc = segue.destination  as! SigninViewController
+            vc.userName = PersonName
+            vc.userLogo = PersonImage
+            vc.userContact = PersonContact
+            vc.userProfession = PersonProfession
+        }
+         */
+ }
 
     /*
     // MARK: - Navigation
