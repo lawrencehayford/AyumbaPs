@@ -3,6 +3,7 @@ import UIKit
 import  CoreLocation
 
 
+
 class ExploreViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate{
     
     @IBOutlet weak var loader: UIActivityIndicatorView!
@@ -48,10 +49,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
             }
             //cell.ServiceImage.image = UIImage(named: (services.imagePath + services.GetFilteredArr()[indexPath.row] + services.imageExtension))
             cell.ServiceName.text = services.GetFilteredArr()[indexPath.row].uppercased()
-        if (cell == nil)
-        {
-            return cell
-        }
+        
        return cell
     }
     

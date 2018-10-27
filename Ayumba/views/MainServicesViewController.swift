@@ -7,19 +7,105 @@
 //
 
 import UIKit
+import  Alamofire
 
-class MainServicesViewController: UIViewController {
-    var type : String?
-    var latitude : String?
-    var longitude : String?
+class MainServicesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    struct Person {
+        let name : String
+        let image : String
+        let distance : String
+        let profession : String
+        let contact : String
+    }
+    var personInfo = [Person]()
+    
+    @IBOutlet weak var table: UITableView!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print ("count is : \(self.personInfo.count)")
+        return self.personInfo.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "maincell", for: indexPath) as! MainServicesTableViewCell
+        print("populated table with name : \(self.personInfo[indexPath.row].name)")
+        
+        cell.username.text = self.personInfo[indexPath.row].name
+        cell.profession.text = self.personInfo[indexPath.row].profession
+        cell.distance.text = self.personInfo[indexPath.row].distance
+        
+       
+        return cell
+    }
+    
+    var type : String!
+    var latitude : String!
+    var longitude : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("latitude : \(latitude)")
-        print("longitude : \(longitude)")
-        print("type : \(type)")
+        print("latitude : \(String(describing: latitude))")
+        print("longitude : \(String(describing: longitude))")
+        print("type : \(String(describing: type))")
+        loader.startAnimating()
         // Do any additional setup after loading the view.
+        
+        //********************
+        
+        DispatchQueue.global(qos: .background).async {
+            // Background Thread
+            self.Load()
+            DispatchQueue.main.async {
+                // Run UI Updates or call completion block
+                print("Finished all requests.")
+                self.loader.stopAnimating()
+                self.loader.isHidden = true
+                self.table.reloadData()
+                
+            }
+        }
+        //********************
     }
+    
+    
+    
+    func Load() {
+        
+        let parameters = [
+            "type": "1" ,//String(describing: type),
+            "latitude": "-0.2335539", //String(describing: latitude),
+            "longitude": "5.5493243" //String(describing: longitude)
+            
+        ]
+        let request = SendHttpRequest("get-service-users","POST", parameters,[:])
+        request.send() { responseObject, error in
+            // response from request sent
+            let result = responseObject! as String
+            let dic = request.parseJsonString(input: result)
+            print(dic)
+            for data in dic {
+                //appending in a struct
+                self.personInfo.append(Person(
+                    name: String(describing: data["username"]! ),
+                image: String(describing: data["avatar"]! ),
+                distance: String(describing: data["distance"]! as! Double )
+                ,
+                profession: String(describing: data["gender"]!),
+                contact: String(describing: data["contact"]! )
+                
+                ))
+              
+                
+            }
+            
+            self.table.reloadData()
+            print ("table reloaded");
+            return
+        }
+        
+    }
+    
     
 
     /*
