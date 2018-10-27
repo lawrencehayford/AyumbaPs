@@ -66,7 +66,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
         }
         
           cell.serviceDescription.text = self.serviceArr[index!].description
-        
+           
        return cell
     }
     
