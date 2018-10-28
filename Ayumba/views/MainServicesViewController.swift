@@ -52,6 +52,7 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
         print("latitude : \(String(describing: latitude!))")
         print("longitude : \(String(describing: longitude!))")
         print("type : \(String(describing: type!))")
+        loader.isHidden = false
         loader.startAnimating()
         // Do any additional setup after loading the view.
         

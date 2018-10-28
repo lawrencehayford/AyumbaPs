@@ -82,7 +82,12 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
         
         DispatchQueue.global(qos: .background).async {
             // Background Thread
-            self.Load()
+            do{
+               
+               try  self.Load()
+            }catch{
+                print ("error occured \(error)")
+            }
             DispatchQueue.main.async {
                 // Run UI Updates or call completion block
                 print("Finished all requests.")
@@ -113,7 +118,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     }
     
     
-    func Load() {
+    func Load() throws{
         
         
         let request = SendHttpRequest("get-services","POST",[:],[:])
@@ -164,7 +169,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
         
     }
     
-    func Locate(){
+    func Locate() throws{
         
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.locationServicesEnabled() {

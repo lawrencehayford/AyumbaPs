@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     
@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     var userLogo : String!
     var userContact : String!
     
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
@@ -38,13 +39,14 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     let services = Setup()
     var serviceArr = [serviceStruct]()
     var imagePicker = UIImagePickerController()
-    var ProfessionSelected : String!
-    var base64Image : String!
+    var ProfessionSelected : String! = "1"
+    var base64Image : String! = ""
     
     
     
     override func viewDidLoad() {
       super.viewDidLoad()
+        loader.isHidden = true
         if let data = UserDefaults.standard.value(forKey:"Services") as? Data {
             self.serviceArr = try! PropertyListDecoder().decode(Array<serviceStruct>.self, from: data)
             print(serviceArr)
@@ -52,11 +54,17 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         
         self.servicePicker.delegate = self
         self.servicePicker.dataSource = self
-        
-       
-      
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -172,52 +180,64 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     @IBAction func signUp(_ sender: UIButton) {
         if((fullname.text?.isEmpty)! && (email.text?.isEmpty)! && (contact.text?.isEmpty)! && (password.text?.isEmpty)!){
-            errorLabel.text = "please fill in all field"
-            errorLabel.textColor = UIColor.red
+            alertMessage(message: "Input required", messageTitle: "Please fill in all input")
             return
-        }
+            }
+        
         do {
-            signupButton.isEnabled = false
+             signupButton.isEnabled = false
+             loader.isHidden = false
+             loader.startAnimating()
+            
             try Load()
         } catch  {
-            signupButton.isEnabled = true
-            alertMessage(message: "Error", messageTitle: "An Error has occured")
+            
+            alertMessage(message: "Error", messageTitle: "An Error has occured. \(error)")
         }
         
         
     }
     
     
-    func Load() {
-        
+    func Load() throws {
+        print("sending request..")
         let parameters = [
             "fullname": String(describing: fullname.text!),
-            "email": String(describing: email.text),
-            "password": String(describing: password.text),
-            "contact": String(describing: contact.text),
-            "profession": String(describing: ProfessionSelected),
-            "photo": String(describing: base64Image),
-            "longitude": String(describing: UserDefaults.standard.value(forKey:"longitude")),
-             "latitude": String(describing: UserDefaults.standard.value(forKey:"latitude"))
+            "email": String(describing: email.text!),
+            "password": String(describing: password.text!),
+            "contact": String(describing: contact.text!),
+            "profession": String(describing: ProfessionSelected!),
+            "photo": String(describing: base64Image!),
+            "longitude": String(describing: UserDefaults.standard.value(forKey:"longitude")!),
+             "latitude": String(describing: UserDefaults.standard.value(forKey:"latitude")!)
             
         ]
+        //print (parameters)
         let request = SendHttpRequest("add-user","POST", parameters,[:])
         request.send() { responseObject, error in
             // response from request sent
             let result = responseObject! as String
             let dic = request.parseJsonString(input: result)
             print(dic)
+            
             for data in dic {
-                if(data["success"] as Any as! String == "Y"){
+                if(data["success"] as Any as! String == "0"){
                     //success
-                    self.alertMessage(message: "Registration Successful", messageTitle: String(describing: data["message"]))
+                    self.alertMessage(message: data["message"]! as! String, messageTitle: String(describing: "Registration Successfull"))
+                    self.fullname.text = ""
+                    self.email.text = ""
+                    self.contact.text = ""
+                    self.password.text = ""
+                    
+                    
                    
                 }else{
                     //failed
                     
-                    self.alertMessage(message: "Registration Failed", messageTitle: String(describing: data["message"]))
+                    self.alertMessage(message: data["message"]! as! String, messageTitle: String(describing: "Registration Failed"))
                 }
             }
+            
             
         }
         
@@ -228,6 +248,9 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     }
     func alertMessage(message : String, messageTitle :String){
         signupButton.isEnabled = true
+        loader.isHidden = true
+        loader.stopAnimating()
+        
         let alert = UIAlertController(title: messageTitle, message: String(describing: message ), preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
