@@ -61,8 +61,10 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription </key>
-	<string></string>
+	<string>We need you location to detect nearest service provider at your area</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
+	<string>We need you location to detect nearest service provider at your area</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We Need your picture to update your profile picture</string>
 </dict>
 </plist>

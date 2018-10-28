@@ -11,10 +11,12 @@ class Setup{
     var imageExtension : String = ".jpg"
     var imagePath : String = "http://ps.ayumba.com/service_images/"
     var selectedService : String!
+    let defaults = UserDefaults.standard
     
     init() {
         
     }
+    
     
     
      func GetArtisan() -> [String]{
@@ -47,6 +49,7 @@ class Setup{
     func GetSelectedRow() -> String {
         return self.selectedService
     }
+    
     
     
     

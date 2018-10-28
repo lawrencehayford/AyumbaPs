@@ -17,7 +17,7 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
     var latitude : String?
     var longitude : String?
     
-    struct serviceStruct {
+    struct serviceStruct: Codable {
         let id : String
         let name : String
         let type : String
@@ -152,6 +152,8 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
                 
                 
             }
+            
+            self.services.defaults.set(try? PropertyListEncoder().encode(self.serviceArr), forKey: "Services")
             self.services.SetFilteredArr(Arr: self.services.GetArtisan())
             self.table.reloadData()
             print(self.services.GetArtisan())
@@ -225,6 +227,8 @@ class ExploreViewController: UIViewController , UITableViewDataSource, UITableVi
             latitude = String(location.coordinate.latitude)
             longitude = String(location.coordinate.longitude)
             print(location.coordinate)
+            self.services.defaults.set(latitude, forKey: "latitude")
+            self.services.defaults.set(longitude, forKey: "longitude") 
         }
     }
     
