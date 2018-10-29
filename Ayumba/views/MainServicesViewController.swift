@@ -19,6 +19,7 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
         let profession : String
         let contact : String
     }
+    var setup = Setup()
     var personInfo = [Person]()
     var PersonImage : String!
     var PersonProfession : String!
@@ -113,11 +114,20 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        PersonImage =  self.personInfo[indexPath.row].image
-        PersonContact =  self.personInfo[indexPath.row].contact
-        PersonProfession =  self.personInfo[indexPath.row].profession
-        PersonName =  self.personInfo[indexPath.row].name
-        performSegue(withIdentifier: "SigninSeque", sender: self)
+        UserDefaults.standard.set(self.personInfo[indexPath.row].image, forKey: "professionalPhoto")
+         UserDefaults.standard.set(self.personInfo[indexPath.row].name, forKey: "professionalName")
+         UserDefaults.standard.set(self.personInfo[indexPath.row].contact, forKey: "professionalContact")
+         UserDefaults.standard.set(self.personInfo[indexPath.row].profession, forKey: "professionalProfession")
+        if(setup.isKeyPresentInUserDefaults(key: "email")){
+            //user already logged in  so callserviceprovider
+             performSegue(withIdentifier: "Callserviceprovider", sender: self)
+            
+        }else{
+            //user hasnt signed up. send him to signup page
+            performSegue(withIdentifier: "SignupSeque", sender: self)
+        }
+        
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

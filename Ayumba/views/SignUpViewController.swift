@@ -40,6 +40,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     var serviceArr = [serviceStruct]()
     var imagePicker = UIImagePickerController()
     var ProfessionSelected : String! = "1"
+    var ProfessionSelectedName : String! = "Plumbing"
     var base64Image : String! = ""
     
     
@@ -144,13 +145,13 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
          instead of `UIImagePickerControllerEditedImage`
          */
         if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage{
-            print(editedImage)
-            self.imgProfile.image = editedImage
-            
            
+            self.imgProfile.image = editedImage
             let imageData:NSData = UIImagePNGRepresentation(editedImage)! as NSData
             // convert the NSData to base64 encoding
             self.base64Image = imageData.base64EncodedString()
+           
+            
             
         }
         
@@ -190,6 +191,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
              loader.startAnimating()
             
             try Load()
+            
         } catch  {
             
             alertMessage(message: "Error", messageTitle: "An Error has occured. \(error)")
@@ -224,12 +226,20 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
                 if(data["success"] as Any as! String == "0"){
                     //success
                     self.alertMessage(message: data["message"]! as! String, messageTitle: String(describing: "Registration Successfull"))
+                    
+                    UserDefaults.standard.set( self.base64Image, forKey: "avatar")
+                    UserDefaults.standard.set( self.fullname.text, forKey: "fullname")
+                    UserDefaults.standard.set( String(describing: self.email.text!), forKey: "email")
+                    UserDefaults.standard.set( String(describing: self.ProfessionSelectedName), forKey: "profession")
+                    UserDefaults.standard.set( String(describing: self.contact.text!), forKey: "contact")
+                    
+                    
                     self.fullname.text = ""
                     self.email.text = ""
                     self.contact.text = ""
                     self.password.text = ""
                     
-                    
+                    self.performSegue(withIdentifier: "GotoCallProfessionalSeque", sender: self)
                    
                 }else{
                     //failed
@@ -245,6 +255,8 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent  component: Int) {
         ProfessionSelected = serviceArr[row].id as String
+        ProfessionSelectedName = serviceArr[row].name as String
+        
     }
     func alertMessage(message : String, messageTitle :String){
         signupButton.isEnabled = true

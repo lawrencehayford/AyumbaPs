@@ -50,7 +50,20 @@ class Setup{
         return self.selectedService
     }
     
+    func base64Convert(strbase64: String?) -> UIImage{
+        if (strbase64?.isEmpty)! {
+            return #imageLiteral(resourceName: "no_image_found")
+        }else {
+            // !!! Separation part is optional, depends on your Base64String !!!
+            let dataDecoded:NSData = NSData(base64Encoded: strbase64!, options: NSData.Base64DecodingOptions(rawValue: 0))!
+            let decodedimage:UIImage = UIImage(data: dataDecoded as Data)!
+            return decodedimage
+        }
+    }
     
+    func isKeyPresentInUserDefaults(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
+    }
     
     
 }

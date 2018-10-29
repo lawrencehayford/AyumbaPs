@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import WebKit
 
 class ChatViewController: UIViewController {
-
+    @IBOutlet weak var webview: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = URL(string: "http:/ps.ayumba.com/chat")
+        let request = URLRequest(url : url!)
+        webview.load(request)
 
         // Do any additional setup after loading the view.
     }
@@ -19,9 +25,11 @@ class ChatViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        // 1
+     
     }
     
-
+   
     /*
     // MARK: - Navigation
 
