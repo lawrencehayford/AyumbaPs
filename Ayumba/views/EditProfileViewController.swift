@@ -31,6 +31,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         imgProfile.layer.cornerRadius = imgProfile.frame.height/2
         imgProfile.clipsToBounds = true
         
+        
         let strbase64 = String(describing: UserDefaults.standard.value(forKey:"avatar")!)
         
             profession.text = String(describing: UserDefaults.standard.value(forKey:"profession")!)

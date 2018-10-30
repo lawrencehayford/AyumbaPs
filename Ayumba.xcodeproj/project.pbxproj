@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		328A6391589C4FB2693B47E4 /* Pods_AyumbaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAD4D37FE0CABB6D97B0EEE /* Pods_AyumbaUITests.framework */; };
 		4CED5762F9B4951EDF36AEEE /* Pods_AyumbaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A69D681FFDC18BD330DE4FC /* Pods_AyumbaTests.framework */; };
+		840CC6E62188BA8400E7BE78 /* CallProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CC6E52188BA8400E7BE78 /* CallProviderViewController.swift */; };
 		840E07512184FF66007ECE8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07502184FF66007ECE8B /* LoginViewController.swift */; };
 		840E075321850763007ECE8B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E075221850763007ECE8B /* ForgotPasswordViewController.swift */; };
 		8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAF921600E2700DD68E0 /* ServicesTableView.swift */; };
@@ -54,6 +55,7 @@
 		2E2DA34430A3346308391CDA /* Pods-AyumbaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AyumbaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AyumbaUITests/Pods-AyumbaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		447A3306D531FBA09C315355 /* Pods-Ayumba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ayumba.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ayumba/Pods-Ayumba.debug.xcconfig"; sourceTree = "<group>"; };
 		4A69D681FFDC18BD330DE4FC /* Pods_AyumbaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AyumbaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840CC6E52188BA8400E7BE78 /* CallProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallProviderViewController.swift; sourceTree = "<group>"; };
 		840E07502184FF66007ECE8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		840E075221850763007ECE8B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8424EAF921600E2700DD68E0 /* ServicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				840E07502184FF66007ECE8B /* LoginViewController.swift */,
 				840E075221850763007ECE8B /* ForgotPasswordViewController.swift */,
 				84F5ED882187813F004998CC /* EditProfileViewController.swift */,
+				840CC6E52188BA8400E7BE78 /* CallProviderViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				84C9DA3A2184ACF80014197C /* SignUpViewController.swift in Sources */,
 				844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */,
 				84656C862183097300ED1248 /* MainServicesViewController.swift in Sources */,
+				840CC6E62188BA8400E7BE78 /* CallProviderViewController.swift in Sources */,
 				844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */,
 				844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */,
 				844D6A50215BE22200E226A5 /* ExploreViewController.swift in Sources */,
