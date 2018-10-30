@@ -62,10 +62,13 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             print(dic)
             
             for data in dic {
-                if(data["success"] as Any as! String == "0"){
+                if(data["success"] as Any as! String == "Y"){
                     //success
                     self.alertMessage(message: data["message"]! as! String, messageTitle: String(describing: "Update Successfull"))
                     
+                    UserDefaults.standard.set( String(describing: self.email.text!), forKey: "email")
+                   
+                    UserDefaults.standard.set( String(describing: self.contact.text!), forKey: "contact")
                     
                 }else{
                     //failed

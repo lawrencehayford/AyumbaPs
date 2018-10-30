@@ -118,6 +118,7 @@ class MainServicesViewController: UIViewController, UITableViewDelegate, UITable
          UserDefaults.standard.set(self.personInfo[indexPath.row].name, forKey: "professionalName")
          UserDefaults.standard.set(self.personInfo[indexPath.row].contact, forKey: "professionalContact")
          UserDefaults.standard.set(self.personInfo[indexPath.row].profession, forKey: "professionalProfession")
+        UserDefaults.standard.set(self.personInfo[indexPath.row].distance, forKey: "professionaldistance")
         if(setup.isKeyPresentInUserDefaults(key: "email")){
             //user already logged in  so callserviceprovider
              performSegue(withIdentifier: "Callserviceprovider", sender: self)

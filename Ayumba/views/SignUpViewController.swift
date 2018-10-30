@@ -230,7 +230,7 @@ class SignUpViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
                     UserDefaults.standard.set( self.base64Image, forKey: "avatar")
                     UserDefaults.standard.set( self.fullname.text, forKey: "fullname")
                     UserDefaults.standard.set( String(describing: self.email.text!), forKey: "email")
-                    UserDefaults.standard.set( String(describing: self.ProfessionSelectedName), forKey: "profession")
+                    UserDefaults.standard.set( String(describing: self.ProfessionSelectedName!), forKey: "profession")
                     UserDefaults.standard.set( String(describing: self.contact.text!), forKey: "contact")
                     
                     

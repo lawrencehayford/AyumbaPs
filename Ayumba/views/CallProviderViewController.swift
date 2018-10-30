@@ -40,14 +40,63 @@ import UIKit
 }
 class CallProviderViewController: UIViewController {
 
+    @IBOutlet weak var imgPhoto: UIImageView!
+    @IBOutlet weak var serviceName: UILabel!
+    @IBOutlet weak var providerTelephone: UILabel!
+    @IBOutlet weak var providerEmail: UILabel!
+    @IBOutlet weak var providerName: UILabel!
+    @IBOutlet weak var distance: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        providerName.text = String(describing: UserDefaults.standard.value(forKey:"professionalName")!)
+        providerTelephone.text = String(describing: UserDefaults.standard.value(forKey:"professionalContact")!)
+         serviceName.text = String(describing: UserDefaults.standard.value(forKey:"professionalProfession")!)
+         distance.text = String(describing: UserDefaults.standard.value(forKey:"professionaldistance")!) + "miles"
+        
+        
+        let catPictureURL = URL(string:  String(describing: UserDefaults.standard.value(forKey:"professionalPhoto")!))!
+        
+        // Creating a session object with the default configuration.
+        // You can read more about it here https://developer.apple.com/reference/foundation/urlsessionconfiguration
+        let session = URLSession(configuration: .default)
+        
+        // Define a download task. The download task will download the contents of the URL as a Data object and then you can do what you wish with that data.
+        let downloadPicTask = session.dataTask(with: catPictureURL) { (data, response, error) in
+            // The download has finished.
+            if let e = error {
+                print("Error downloading cat picture: \(e)")
+            } else {
+                // No errors found.
+                // It would be weird if we didn't have a response, so check for that too.
+                if let res = response as? HTTPURLResponse {
+                    print("Downloaded cat picture with response code \(res.statusCode)")
+                    if let imageData = data {
+                        // Finally convert that Data into an image and do what you wish with it.
+                        let image = UIImage(data: imageData)
+                        self.imgPhoto.image = image
+                        // Do something with your image.
+                    } else {
+                        print("Couldn't get image: Image is nil")
+                    }
+                } else {
+                    print("Couldn't get response code for some reason")
+                }
+            }
+        }
+        
+        downloadPicTask.resume()
 
         // Do any additional setup after loading the view.
     }
     
     
-
+    @IBAction func Call(_ sender: Any) {
+        dialNumber(number: providerTelephone.text!)
+    }
+    @IBAction func Message(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -57,5 +106,18 @@ class CallProviderViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func dialNumber(number : String) {
+        
+        if let url = URL(string: "tel://\(number)"),
+            UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler:nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        } else {
+            // add error message here
+        }
+    }
 
 }
