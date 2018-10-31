@@ -30,15 +30,20 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         imgProfile.layer.borderColor = UIColor.black.cgColor
         imgProfile.layer.cornerRadius = imgProfile.frame.height/2
         imgProfile.clipsToBounds = true
+        let base64 = String(describing: UserDefaults.standard.value(forKey:"avatar")!)
+        if(base64.count > 100){
+            let strbase64 = base64
+            imgProfile.image = setup.base64Convert(strbase64: strbase64)
+            
+        }
         
-        
-        let strbase64 = String(describing: UserDefaults.standard.value(forKey:"avatar")!)
+      
         
             profession.text = String(describing: UserDefaults.standard.value(forKey:"profession")!)
             email.text = String(describing: UserDefaults.standard.value(forKey:"email")!)
             contact.text = String(describing: UserDefaults.standard.value(forKey:"contact")!)
             
-            imgProfile.image = setup.base64Convert(strbase64: strbase64)
+        
             
      
 
@@ -217,5 +222,10 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
         self.present(alert, animated: true)
+    }
+    //editProfileToMainSeque
+    @IBAction func Back(_ sender: Any) {
+        self.performSegue(withIdentifier: "editProfileToMainSeque", sender: self)
+        
     }
 }

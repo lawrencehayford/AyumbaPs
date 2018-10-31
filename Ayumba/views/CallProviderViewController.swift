@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 @IBDesignable extension UIButton {
     
     @IBInspectable var borderWidth: CGFloat {
@@ -38,7 +39,12 @@ import UIKit
         }
     }
 }
-class CallProviderViewController: UIViewController {
+class CallProviderViewController: UIViewController, MFMessageComposeViewControllerDelegate {
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
     @IBOutlet weak var imgPhoto: UIImageView!
     @IBOutlet weak var serviceName: UILabel!
@@ -95,6 +101,13 @@ class CallProviderViewController: UIViewController {
         dialNumber(number: providerTelephone.text!)
     }
     @IBAction func Message(_ sender: Any) {
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = "Hi \(String(describing: providerName.text)), i understand you sepcialised in \(String(describing: serviceName.text)) and i need your services"
+            controller.recipients = ([providerTelephone.text] as! [String])
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     
     /*
@@ -119,5 +132,11 @@ class CallProviderViewController: UIViewController {
             // add error message here
         }
     }
-
+    
+    
+    @IBAction func Back(_ sender: Any) {
+        self.performSegue(withIdentifier: "CallToMainSeque", sender: self)
+        
+    }
+    
 }
