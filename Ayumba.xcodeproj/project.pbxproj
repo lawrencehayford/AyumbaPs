@@ -12,6 +12,8 @@
 		840CC6E62188BA8400E7BE78 /* CallProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CC6E52188BA8400E7BE78 /* CallProviderViewController.swift */; };
 		840E07512184FF66007ECE8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07502184FF66007ECE8B /* LoginViewController.swift */; };
 		840E075321850763007ECE8B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E075221850763007ECE8B /* ForgotPasswordViewController.swift */; };
+		8412391F218BA3D900062ECF /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412391E218BA3D900062ECF /* SettingsTableViewController.swift */; };
+		84123921218C584400062ECF /* SettingsWebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84123920218C584400062ECF /* SettingsWebviewViewController.swift */; };
 		8424EAFA21600E2700DD68E0 /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAF921600E2700DD68E0 /* ServicesTableView.swift */; };
 		8424EAFE2161390F00DD68E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424EAFD2161390F00DD68E0 /* CardView.swift */; };
 		84391F07216266AF00A66E40 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391F06216266AF00A66E40 /* Setup.swift */; };
@@ -58,6 +60,8 @@
 		840CC6E52188BA8400E7BE78 /* CallProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallProviderViewController.swift; sourceTree = "<group>"; };
 		840E07502184FF66007ECE8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		840E075221850763007ECE8B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		8412391E218BA3D900062ECF /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		84123920218C584400062ECF /* SettingsWebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWebviewViewController.swift; sourceTree = "<group>"; };
 		8424EAF921600E2700DD68E0 /* ServicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
 		8424EAFD2161390F00DD68E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		84391F06216266AF00A66E40 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				8424EAF921600E2700DD68E0 /* ServicesTableView.swift */,
 				84656C892183CC5200ED1248 /* MainServicesTableViewCell.swift */,
+				8412391E218BA3D900062ECF /* SettingsTableViewController.swift */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				840E075221850763007ECE8B /* ForgotPasswordViewController.swift */,
 				84F5ED882187813F004998CC /* EditProfileViewController.swift */,
 				840CC6E52188BA8400E7BE78 /* CallProviderViewController.swift */,
+				84123920218C584400062ECF /* SettingsWebviewViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -460,9 +466,11 @@
 				846EB610215627C20002AD2D /* ViewController.swift in Sources */,
 				846EB60E215627C20002AD2D /* AppDelegate.swift in Sources */,
 				84656C8A2183CC5200ED1248 /* MainServicesTableViewCell.swift in Sources */,
+				84123921218C584400062ECF /* SettingsWebviewViewController.swift in Sources */,
 				84C9DA3A2184ACF80014197C /* SignUpViewController.swift in Sources */,
 				844D6A54215BE25500E226A5 /* ProfileViewController.swift in Sources */,
 				84656C862183097300ED1248 /* MainServicesViewController.swift in Sources */,
+				8412391F218BA3D900062ECF /* SettingsTableViewController.swift in Sources */,
 				840CC6E62188BA8400E7BE78 /* CallProviderViewController.swift in Sources */,
 				844D6A52215BE24000E226A5 /* SettingsViewController.swift in Sources */,
 				844D6A56215BE26300E226A5 /* ChatViewController.swift in Sources */,

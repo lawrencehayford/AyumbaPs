@@ -21,10 +21,11 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     var imagePicker = UIImagePickerController()
     var base64Image : String! = ""
     var setup = Setup()
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loading.isHidden = true
         imgProfile.layer.borderWidth = 1
         imgProfile.layer.masksToBounds = false
         imgProfile.layer.borderColor = UIColor.black.cgColor
@@ -51,6 +52,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     func Load() throws {
+        loading.isHidden = false
+        loading.startAnimating()
         print("sending request..")
         let parameters = [
             "email": String(describing: email.text!),
@@ -77,7 +80,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
                     
                 }else{
                     //failed
-                    
+                    self.loading.isHidden = true
+                    self.loading.stopAnimating()
                     self.alertMessage(message: data["message"]! as! String, messageTitle: String(describing: "Update Failed"))
                 }
             }
@@ -223,9 +227,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         
         self.present(alert, animated: true)
     }
-    //editProfileToMainSeque
-    @IBAction func Back(_ sender: Any) {
+    @IBAction func goBack(_ sender: Any) {
         self.performSegue(withIdentifier: "editProfileToMainSeque", sender: self)
-        
     }
+   
 }

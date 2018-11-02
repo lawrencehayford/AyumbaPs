@@ -52,6 +52,7 @@ class CallProviderViewController: UIViewController, MFMessageComposeViewControll
     @IBOutlet weak var providerEmail: UILabel!
     @IBOutlet weak var providerName: UILabel!
     @IBOutlet weak var distance: UILabel!
+    var setup = Setup()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,8 +62,8 @@ class CallProviderViewController: UIViewController, MFMessageComposeViewControll
          distance.text = String(describing: UserDefaults.standard.value(forKey:"professionaldistance")!) + "miles"
         
         
-        let catPictureURL = URL(string:  String(describing: UserDefaults.standard.value(forKey:"professionalPhoto")!))!
-        
+        let catPictureURL = URL(string: "\(setup.imagePath + String(describing: UserDefaults.standard.value(forKey:"professionalPhoto")!))" )!
+        print(catPictureURL)
         // Creating a session object with the default configuration.
         // You can read more about it here https://developer.apple.com/reference/foundation/urlsessionconfiguration
         let session = URLSession(configuration: .default)
@@ -80,7 +81,9 @@ class CallProviderViewController: UIViewController, MFMessageComposeViewControll
                     if let imageData = data {
                         // Finally convert that Data into an image and do what you wish with it.
                         let image = UIImage(data: imageData)
+                        
                         self.imgPhoto.image = image
+                        print("converted data into an inage")
                         // Do something with your image.
                     } else {
                         print("Couldn't get image: Image is nil")
@@ -132,11 +135,11 @@ class CallProviderViewController: UIViewController, MFMessageComposeViewControll
             // add error message here
         }
     }
-    
-    
-    @IBAction func Back(_ sender: Any) {
-        self.performSegue(withIdentifier: "CallToMainSeque", sender: self)
-        
+    @IBAction func goBack(_ sender: Any) {
+         self.performSegue(withIdentifier: "CallToMainSeque", sender: self)
     }
+    
+    
+    
     
 }

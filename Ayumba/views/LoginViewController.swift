@@ -97,6 +97,11 @@ class LoginViewController: UIViewController {
         
     }
     
+    
+    @IBAction func goBack(_ sender: Any) {
+         self.performSegue(withIdentifier: "fromLoginToExploreSeque", sender: self)
+    }
+    
     func alertMessage(message : String, messageTitle :String){
         loginBtn.isEnabled = true
         loader.isHidden = true
